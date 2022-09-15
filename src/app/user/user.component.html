@@ -1,0 +1,78 @@
+<div class="container">
+  <h2>User Form</h2>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label>Name</label><br />
+      <input type="text" placeholder="Enter name" formControlName="name" />
+    </div>
+    <br />
+    <div>
+      <label>Date of Birth</label><br />
+      <input type="date" placeholder="select dob" formControlName="dob" />
+    </div>
+    <br />
+    <div>
+      <label>Gender</label><br />
+      <input
+        type="radio"
+        formControlName="gender"
+        id="male"
+        name="gender"
+        value="Male"
+      />
+      <label for="male">Male</label><br />
+      <input
+        type="radio"
+        formControlName="gender"
+        id="female"
+        name="gender"
+        value="female"
+      />
+      <label for="female">Female</label><br />
+    </div>
+    <br />
+    <div>
+      <label for="qualification">Qualification</label><br />
+      <select
+        name="qualification"
+        formControlName="qualification"
+        id="qualification"
+      >
+        <option value="SSLC">SSLC</option>
+        <option value="PUC">PUC</option>
+        <option value="Graduate">Graduate</option>
+        <option value="Post-Graduate">Post-Graduate</option>
+      </select>
+    </div>
+    <br />
+    <div>
+      <label>Mobile Number</label><br />
+      <input
+        type="text"
+        placeholder="Enter mobile num"
+        formControlName="mobileNumber"
+      />
+    </div>
+    <br />
+    <div>
+      <label>Email</label><br />
+      <input type="text" placeholder="Enter Email" formControlName="email" />
+    </div>
+    <br />
+    <div class="row">
+      <div>
+        <button
+          style="width: 100px"
+          class="btn btn-outline-secondary text-dark btn-sm"
+          (click)="clearUserForm()"
+        >
+          Clear
+        </button>
+        <span style="padding: 1%"></span>
+        <button style="width: 100px" class="btn btn-outline-primary btn-sm">
+          Save
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

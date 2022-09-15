@@ -1,0 +1,17 @@
+<table class="table" *ngIf="userList?.length > 0; else noUser">
+  <tr>
+    <th>Name</th>
+    <th>Qualification</th>
+    <th>Mobile Number</th>
+    <th>Email</th>
+    <!-- <th>Action</th> -->
+  </tr>
+  <tr *ngFor="let user of userList">
+    <td>{{ user.name }}</td>
+    <td>{{ user.qualification }}</td>
+    <td>{{ user.mobileNumber }}</td>
+    <td>{{ user.email }}</td>
+    <!-- <td><span>Edit</span> | <span (click)="deleteUser(user)">Delete</span></td> -->
+  </tr>
+</table>
+<ng-template #noUser> No User List Data Found </ng-template>

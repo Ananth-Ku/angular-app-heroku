@@ -1,0 +1,14 @@
+<div class="container">
+  <app-header></app-header>
+  <br />
+  <button
+    style="float: left"
+    (click)="goToUserList()"
+    class="btn btn btn-outline-dark btn-sm"
+  >
+    Go Back
+  </button>
+  <button style="float: right" (click)="addUser()">Add Users</button
+  ><br /><br />
+  <router-outlet></router-outlet>
+</div>
