@@ -78,5 +78,18 @@ app.get("/getUser", function (req, res) {
   });
 });
 
+app.post("/addUser", function (req, res) {
+  var mod = new model(req.body);
+  if (req.body) {
+    mod.save(function (err, data) {
+      if (err) {
+        res.send(err);
+      } else {
+        res.send({ data: "Record has been Inserted..!!" });
+      }
+    });
+  }
+});
+
 // Start the app by listening on the default Heroku port
 app.listen(process.env.PORT || 3000);
