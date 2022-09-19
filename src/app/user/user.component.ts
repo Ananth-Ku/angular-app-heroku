@@ -49,7 +49,7 @@ export class UserComponent implements OnInit {
       if (res !== undefined) {
         console.log(res);
         console.log('user added successfully');
-        this.router.navigate(['listUser']);
+        this.router.navigate(['getUser']);
         this._snackBar.open('Saved Successfully', 'Done');
       }
     });

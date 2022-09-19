@@ -18,6 +18,6 @@ export class HomeComponent implements OnInit {
   }
 
   goToUserList() {
-    this.router.navigate(['/listUser']);
+    this.router.navigate(['/getUser']);
   }
 }

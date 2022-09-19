@@ -7,7 +7,7 @@ import { UserComponent } from './user/user.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/listUser',
+    redirectTo: '/getUser',
     pathMatch: 'full',
   },
   {
@@ -15,7 +15,7 @@ const routes: Routes = [
     component: UserComponent,
   },
   {
-    path: 'listUser',
+    path: 'getUser',
     component: UserListComponent,
   },
   {
